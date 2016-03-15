@@ -9,6 +9,8 @@ The button sends a patch request to capture with params: id:@pokemon.
 Howardcharlessamjunyuwarrenjuno-izard, of course!
 
 # Question 4: What did you pass into the redirect_to? If it is a path, what did that path need? If it is not a path, why is it okay not to have a path here?
+redirect_to "/trainers/#{pkmn.trainer_id}"
+Basically just goes to the trainer page of the Pokemon we just damaged, needed the /trainers/ and the trainer_id of the pokemon in question
 
 # Question 5: Explain how putting this line "flash[:error] = @pokemon.errors.full_messages.to_sentence" shows error messages on your form.
 
