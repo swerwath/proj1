@@ -16,6 +16,18 @@ class PokemonsController < ApplicationController
     @pokemon = Pokemon.new
   end
 
+  def heal
+    pkmn = Pokemon.find(params[:id])
+    if pkmn.health < 90
+      pkmn.health += 10
+      pkmn.save
+    else
+      pkmn.health = 100
+      pkmn.save
+    end
+    redirect_to "/trainers/#{pkmn.trainer_id}"
+  end
+
   def capture
     pkmn = Pokemon.find(params[:id])
     pkmn.trainer_id = current_trainer.id
@@ -29,7 +41,8 @@ class PokemonsController < ApplicationController
       pkmn.health -= 10
       pkmn.save
     else
-      pkmn.destroy
+      pkmn.health = 0
+      pkmn.save
     end
     redirect_to "/trainers/#{pkmn.trainer_id}"
   end
