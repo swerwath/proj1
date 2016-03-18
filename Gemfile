@@ -8,6 +8,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
+gem 'rails_12factor', group: :production
 gem 'devise'
 gem 'foundation-rails', '5.4.5'
 gem 'simple_form'
@@ -24,3 +25,5 @@ group :production do
   gem 'pg'
   gem 'thin'
 end
+
+ruby "2.2.0"

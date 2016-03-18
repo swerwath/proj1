@@ -13,7 +13,10 @@ redirect_to "/trainers/#{pkmn.trainer_id}"
 Basically just goes to the trainer page of the Pokemon we just damaged, needed the /trainers/ and the trainer_id of the pokemon in question
 
 # Question 5: Explain how putting this line "flash[:error] = @pokemon.errors.full_messages.to_sentence" shows error messages on your form.
+This line takes any error messages that the @pokemon object has generated (from failing verification) and displays them. Hopefully, this will be empty.
 
 # Give us feedback on the project and decal below!
+The project was a lot of fun, though I often found myself scrolling through lecture recordings to try and figure out what to do next. That being said, it was a good learning experience in reading Rails documentation
 
 # Extra credit: Link your Heroku deployed app
+http://infinite-shore-79998.herokuapp.com/
